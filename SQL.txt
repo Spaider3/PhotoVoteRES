@@ -1,0 +1,14 @@
+CREATE TABLE `profiles` (
+  `Number` int(250) NOT NULL AUTO_INCREMENT,
+  `NS` tinytext NOT NULL,
+  `Photo` text NOT NULL,
+  `Rating` int(12) NOT NULL,
+   PRIMARY KEY (Number)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `comments` (
+  `id_comment` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(15) NOT NULL,
+  `comment` text NOT NULL,
+  `id_profile` varchar(250) NOT NULL,
+  PRIMARY KEY (`id_comment`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
